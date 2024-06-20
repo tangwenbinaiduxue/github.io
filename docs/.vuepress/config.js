@@ -8,6 +8,7 @@ export default defineUserConfig({
 
   title: 'VuePress',
   description: 'Tang wen bin',
+  base:'/github.io/',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
