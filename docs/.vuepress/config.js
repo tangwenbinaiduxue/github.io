@@ -16,20 +16,13 @@ export default defineUserConfig({
     navbar: [
       '/',
       {
-        text: 'Article',
-        link: '/article/',
-      },
-      {
-        text: 'Category',
-        link: '/category/',
-      },
-      {
-        text: 'Tag',
-        link: '/tag/',
-      },
-      {
-        text: 'Timeline',
-        link: '/timeline/',
+        text: 'tech',
+        children:[
+          {
+            text: 'vue',
+            link: '/tech/'
+          }
+        ]
       },
     ],
   }),
@@ -86,6 +79,20 @@ export default defineUserConfig({
           }),
           itemFrontmatter: (name) => ({
             title: `Tag ${name}`,
+            sidebar: false,
+          }),
+        },
+        {
+          key: 'tech',
+          getter: (page) => page.frontmatter.tech || [],
+          layout: 'Tech',
+          itemLayout: 'Tech',
+          frontmatter: () => ({
+            title: 'Tech',
+            sidebar: false,
+          }),
+          itemFrontmatter: (name) => ({
+            title: `Tech ${name}`,
             sidebar: false,
           }),
         },
