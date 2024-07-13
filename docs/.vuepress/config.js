@@ -21,9 +21,30 @@ export default defineUserConfig({
           {
             text: 'vue',
             link: '/tech/'
+          },
+          {
+            text: 'micro',
+            link: '/micro-single-spa/'
+          },
+          {
+            text: 'vue2源码',
+            link: '/vue2/'
+          },
+          {
+            text: 'vue3源码',
+            link: '/vue3/'
           }
         ]
       },
+      {
+        text: 'structure',
+        children:[
+          {
+            text: 'vue-devise',
+            link: '/vue-structure/devise/'
+          }
+        ]
+      }
     ],
   }),
 
